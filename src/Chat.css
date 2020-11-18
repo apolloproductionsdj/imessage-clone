@@ -51,6 +51,21 @@
     flex: 1;
 }
 
+.chat__messages {
+    overflow: scroll;
+}
+
+/* Hide scrollbar for Chromo, Safari and Opera */
+.chat__messages::-webkit-scrollbar {
+    display: none;
+}
+
+.chat__messages {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
 
 
 
