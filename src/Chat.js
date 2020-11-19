@@ -22,8 +22,7 @@ function Chat() {
         if (chatId) {
             db.collection('chats')
                 .doc(chatId)
-                .collection('messages')
-                .orderBy('timestamp', 'desc')
+                .collection('messages').orderBy('timestamp', 'desc')
                 .onSnapshot((snapshot) =>
                     setMessages(
                         snapshot.docs.map((doc) => ({
@@ -58,7 +57,7 @@ function Chat() {
             </div>
             <div className="chat__messages">
                 {messages.map(({ id, data }) => (
-                    <Message key={id} content={data} />
+                    <Message key={id} contents={data} />
                 ))}
 
             </div>

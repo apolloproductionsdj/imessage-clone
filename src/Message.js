@@ -3,7 +3,7 @@ import React from 'react';
 import './Message.css';
 
 function Message({
-    id: id,
+    id,
     contents: { timestamp, displayName, email, message, photo, uid },
 }) {
     return (
